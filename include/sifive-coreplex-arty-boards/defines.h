@@ -30,10 +30,10 @@
 
 // ----------------------------------------------------------------------------
 
-#if defined(SIFIVE_COREPLEX_IP_31_ARTY_BOARD)
-#elif defined(SIFIVE_COREPLEX_IP_51_ARTY_BOARD)
+#if defined(SIFIVE_COREPLEX_31_ARTY_BOARD)
+#elif defined(SIFIVE_COREPLEX_51_ARTY_BOARD)
 #else
-#error "Only SIFIVE_COREPLEX_IP_31_ARTY_BOARD and SIFIVE_COREPLEX_IP_51_ARTY_BOARD are supported."
+#error "Only SIFIVE_COREPLEX_31_ARTY_BOARD and SIFIVE_COREPLEX_51_ARTY_BOARD are supported."
 #endif /* _BOARD */
 
 // ----------------------------------------------------------------------------
