@@ -2,7 +2,7 @@
   "name": "@sifive/coreplex-arty-boards",
   "version": "0.0.2",
   "description": "An xPack with the µOS++ support for the SiFive Coreplex Arty boards",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
