@@ -31,7 +31,7 @@
   },
   "config": {},
   "dependencies": {
-    "@sifive/coreplex-devices": "^0.0.3"
+    "@sifive/coreplex-devices": "^0.0.4"
   },
   "xpack": {},
   "homepage": "https://github.com/micro-os-plus/sifive-coreplex-arty-boards"
