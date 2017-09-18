@@ -4,7 +4,8 @@
   "description": "An xPack with the µOS++ support for the SiFive Coreplex Arty boards",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "npm link @micro-os-plus/c-libs; npm link @micro-os-plus/cpp-libs; npm link @micro-os-plus/diag-trace; npm link @micro-os-plus/riscv-arch; npm link @micro-os-plus/startup; npm link @sifive/coreplex-arty-boards; npm link @sifive/coreplex-devices; npm link @sifive/hifive1-board"
   },
   "repository": {
     "type": "git",
