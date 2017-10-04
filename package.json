@@ -11,14 +11,16 @@
     "type": "git",
     "url": "git+https://github.com/micro-os-plus/sifive-coreplex-arty-boards.git"
   },
+  "homepage": "https://github.com/micro-os-plus/sifive-coreplex-arty-boards",
   "keywords": [
+    "xpack",
     "c++",
     "micro-os-plus",
     "sifive",
     "coreplex",
     "arty",
     "risc-v",
-    "boards"
+    "board"
   ],
   "author": {
     "name": "Liviu Ionescu",
@@ -30,9 +32,10 @@
     "url": "https://github.com/micro-os-plus/sifive-coreplex-arty-boards/issues"
   },
   "config": {},
-  "dependencies": {
-    "@sifive/coreplex-devices": "^0.0.4"
-  },
-  "xpack": {},
-  "homepage": "https://github.com/micro-os-plus/sifive-coreplex-arty-boards"
+  "dependencies": {},
+  "xpack": {
+    "dependencies": {
+      "@sifive/coreplex-devices": "~0.0.5"
+    }
+  }
 }
