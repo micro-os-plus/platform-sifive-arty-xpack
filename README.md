@@ -1,4 +1,4 @@
-## SiFive Coreplex IP Arty boards specific files
+## SiFive Core Complex IP Arty boards specific files
 
 ### How to use
 
@@ -8,11 +8,11 @@ The standard way to include the board files is
 #include <micro-os-plus/board.h>
 ```
 
-## E31/E51 Coreplex FPGA Eval Kit Clock and Reset
+## E31/E51 Core Complex FPGA Eval Kit Clock and Reset
 
-The E31/E51 Coreplex FPGA Eval Kit has a 100MHz input to the FPGA. This is used to derive the Coreplex’s `io_coreClock` at 65 MHz, and the clock (peripheral clock) at 32.5 MHz. The `io_rtcToggle` is driven at approximately 32kHz.
+The E31/E51 Core Complex FPGA Eval Kit has a 100MHz input to the FPGA. This is used to derive the Core Complex’s `io_coreClock` at 65 MHz, and the clock (peripheral clock) at 32.5 MHz. The `io_rtcToggle` is driven at approximately 32kHz.
 
-The system reset driven by the Reset Button on the evaluation board is combined with the external debugger’s `SRST_n` pin as a full system reset for the E31/E51 Coreplex FPGA Eval KitT ̇his is combined with the `io_ndreset` to drive the reset input to the Coreplex.
+The system reset driven by the Reset Button on the evaluation board is combined with the external debugger’s `SRST_n` pin as a full system reset for the E31/E51 Core Complex FPGA Eval KitT ̇his is combined with the `io_ndreset` to drive the reset input to the Core Complex.
 
 The reset vector is set with Switch 0. Leave the switch in the “Off” position to execute from SPI Flash.
 
@@ -51,16 +51,16 @@ This section is intended to developers who plan to include this library in their
 
 ### Easy install
 
-The source files are available from [GitHub](https://github.com/micro-os-plus/sifive-coreplex-arty-boards):
+The source files are available from [GitHub](https://github.com/micro-os-plus/sifive-arty-boards-xpack):
 
 ```bash
-$ git clone https://github.com/micro-os-plus/sifive-coreplex-arty-boards.git sifive-coreplex-arty-boards.git
+$ git clone https://github.com/micro-os-plus/sifive-arty-boards-xpack.git sifive-arty-boards-xpack.git
 ```
 
 The library will shortly be available from the npm registry:
 
 ```bash
-$ npm install @sifive/coreplex-arty-boards
+$ npm install @sifive/arty-boards
 ```
 
 ### Prerequisites
