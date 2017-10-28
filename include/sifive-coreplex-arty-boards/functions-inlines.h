@@ -31,7 +31,7 @@
 #include <stdint.h>
 
 /*
- * Coreplex IP Arty support functions.
+ * Core Complex IP Arty support functions.
  *
  * Inline functions are first defined in C (prefixed with `riscv_board_`),
  * then, for convenience, are redefined in C++ in the `riscv::board::`

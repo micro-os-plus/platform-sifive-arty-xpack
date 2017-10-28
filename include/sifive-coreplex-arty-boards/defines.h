@@ -30,10 +30,10 @@
 
 // ----------------------------------------------------------------------------
 
-#if defined(SIFIVE_COREPLEX_31_ARTY_BOARD)
-#elif defined(SIFIVE_COREPLEX_51_ARTY_BOARD)
+#if defined(SIFIVE_E31ARTY_BOARD)
+#elif defined(SIFIVE_E51ARTY_BOARD)
 #else
-#error "Only SIFIVE_COREPLEX_31_ARTY_BOARD and SIFIVE_COREPLEX_51_ARTY_BOARD are supported."
+#error "Only SIFIVE_E31ARTY_BOARD and SIFIVE_E51ARTY_BOARD are supported."
 #endif /* _BOARD */
 
 // ----------------------------------------------------------------------------
@@ -48,7 +48,7 @@
  *****************************************************************************/
 
 // These are the GPIO bit offsets for the directly driven
-// RGB LEDs on the Freedom Exx Coreplex IP Evaluation Arty FPGA Dev Kit.
+// RGB LEDs on the Freedom Exx Core Complex IP Evaluation Arty FPGA Dev Kit.
 // Additional RGB LEDs are driven by the 3 PWM outputs.
 
 // The LEDs are active high.
@@ -84,7 +84,7 @@
 #define JA_7_OFFSET 15
 
 // The below gives a mapping between global interrupt
-// sources and their number. Note that on the coreplex
+// sources and their number. Note that on the core complex
 // deliverable, the io_global_interrupts go directly into
 // the PLIC. The evaluation image on the FPGA mimics a
 // system with peripheral devices which are driving the
@@ -103,18 +103,40 @@
 // sources by adding their offset to the INT_GPIO_BASE.
 // For example, the buttons are shown here:
 
-#define INT_DEVICE_BUTTON_0 (GPIO_INT_BASE + BUTTON_0_OFFSET)
-#define INT_DEVICE_BUTTON_1 (GPIO_INT_BASE + BUTTON_1_OFFSET)
-#define INT_DEVICE_BUTTON_2 (GPIO_INT_BASE + BUTTON_2_OFFSET)
-#define INT_DEVICE_BUTTON_3 (GPIO_INT_BASE + BUTTON_3_OFFSET)
+#if defined(SIFIVE_E31ARTY_BOARD)
+
+#define INT_DEVICE_BUTTON_0 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_0_OFFSET)
+#define INT_DEVICE_BUTTON_1 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_1_OFFSET)
+#define INT_DEVICE_BUTTON_2 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_2_OFFSET)
+#define INT_DEVICE_BUTTON_3 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_3_OFFSET)
+
+#elif defined(SIFIVE_E51ARTY_BOARD)
+
+#define INT_DEVICE_BUTTON_0 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_0_OFFSET)
+#define INT_DEVICE_BUTTON_1 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_1_OFFSET)
+#define INT_DEVICE_BUTTON_2 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_2_OFFSET)
+#define INT_DEVICE_BUTTON_3 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_3_OFFSET)
+
+#endif
 
 // In addition, the Switches are mapped directly to
 // the PLIC (without going through the GPIO Peripheral).
 
-#define INT_EXT_DEVICE_SW_0 (EXTERNAL_INT_BASE + 0)
-#define INT_EXT_DEVICE_SW_1 (EXTERNAL_INT_BASE + 1)
-#define INT_EXT_DEVICE_SW_2 (EXTERNAL_INT_BASE + 2)
-#define INT_EXT_DEVICE_SW_3 (EXTERNAL_INT_BASE + 3)
+#if defined(SIFIVE_E31ARTY_BOARD)
+
+#define INT_EXT_DEVICE_SW_0 (sifive_e31arty_interrupt_global_switch0)
+#define INT_EXT_DEVICE_SW_1 (sifive_e31arty_interrupt_global_switch1)
+#define INT_EXT_DEVICE_SW_2 (sifive_e31arty_interrupt_global_switch2)
+#define INT_EXT_DEVICE_SW_3 (sifive_e31arty_interrupt_global_switch3)
+
+#elif defined(SIFIVE_E51ARTY_BOARD)
+
+#define INT_EXT_DEVICE_SW_0 (sifive_e51arty_interrupt_global_switch0)
+#define INT_EXT_DEVICE_SW_1 (sifive_e51arty_interrupt_global_switch1)
+#define INT_EXT_DEVICE_SW_2 (sifive_e51arty_interrupt_global_switch2)
+#define INT_EXT_DEVICE_SW_3 (sifive_e51arty_interrupt_global_switch3)
+
+#endif
 
 // This gives the mapping from inputs to LOCAL interrupts.
 
@@ -135,7 +157,7 @@
 #define LOCAL_INT_JA_6   14
 #define LOCAL_INT_JA_7   15
 
-#define RTC_FREQ 32768
+// #define RTC_FREQ 32768
 
 // ----------------------------------------------------------------------------
 

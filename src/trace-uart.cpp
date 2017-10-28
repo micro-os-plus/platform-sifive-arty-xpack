@@ -46,11 +46,11 @@ namespace os
     initialize (void)
     {
       // Set baud rate.
-      // Coreplex boards have the peripheral clock at half the core clock.
-      riscv_device_uart0_ptr->div = (riscv::core::running_frequency_hz () / 2
+      // Arty boards have the peripheral clock at half the core clock.
+      UART0->div = (riscv::core::running_frequency_hz () / 2
           / OS_INTEGER_TRACE_UART0_BAUD_RATE) - 1;
       // Enable transmitter.
-      riscv_device_uart0_ptr->txctrl |= UART_TXEN;
+      UART0->txctrl_bits.txen = 1;
 
       // Wait a bit to avoid corruption on the UART.
       // (In some cases, switching to the IOF can lead
@@ -83,15 +83,16 @@ namespace os
           if (ch == '\n')
             {
               // Wait until FIFO is ready...
-              while ((int32_t) riscv_device_uart0_ptr->txdata < 0)
+              // Without handshake, should not block.
+              while (UART0->txdata_bits.full)
                 ;
-              riscv_device_uart0_ptr->txdata = '\r';
+              UART0->txdata_bits.data = '\r';
             }
 
           // Wait until FIFO is ready...
-          while ((int32_t) riscv_device_uart0_ptr->txdata < 0)
+          while (UART0->txdata_bits.full)
             ;
-          riscv_device_uart0_ptr->txdata = ch;
+          UART0->txdata_bits.data = ch;
         }
 
       // All characters successfully sent.
