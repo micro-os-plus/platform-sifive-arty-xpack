@@ -25,15 +25,13 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SIFIVE_COREPLEX_IP_ARTY_BOARDS_FUNCTIONS_H_
-#define SIFIVE_COREPLEX_IP_ARTY_BOARDS_FUNCTIONS_H_
-
-#include <sifive-coreplex-arty-boards/defines.h>
+#ifndef SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
+#define SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
 
 #include <stdint.h>
 
 /*
- * Core Complex IP Arty support functions.
+ * Arty support functions.
  *
  * Inline functions are first defined in C (prefixed with `riscv_board_`),
  * then, for convenience, are redefined in C++ in the `riscv::board::`
@@ -48,7 +46,6 @@ extern "C"
 {
 #endif /* defined(__cplusplus) */
 
-// ...
 
 #if defined(__cplusplus)
 }
@@ -62,11 +59,11 @@ namespace riscv
 {
   namespace board
   {
-  // ------------------------------------------------------------------------
+    // ------------------------------------------------------------------------
 
-  // ...
 
   } /* namespace board */
+
 // ----------------------------------------------------------------------------
 } /* namespace riscv */
 
@@ -74,4 +71,4 @@ namespace riscv
 
 // ----------------------------------------------------------------------------
 
-#endif /* SIFIVE_COREPLEX_IP_ARTY_BOARDS_FUNCTIONS_H_ */
+#endif /* SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_ */

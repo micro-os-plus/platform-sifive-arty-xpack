@@ -25,8 +25,8 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SIFIVE_COREPLEX_IP_ARTY_BOARDS_DEFINES_H_
-#define SIFIVE_COREPLEX_IP_ARTY_BOARDS_DEFINES_H_
+#ifndef SIFIVE_ARTY_BOARDS_DEFINES_H_
+#define SIFIVE_ARTY_BOARDS_DEFINES_H_
 
 // ----------------------------------------------------------------------------
 
@@ -42,6 +42,8 @@
 
 // ----------------------------------------------------------------------------
 // Definitions from SiFive bsp/env/coreplexip-arty.h
+
+// TODO: possibly rework, to make them consistent with device definitions.
 
 /****************************************************************************
  * GPIO Connections
@@ -161,4 +163,4 @@
 
 // ----------------------------------------------------------------------------
 
-#endif /* SIFIVE_COREPLEX_IP_ARTY_BOARDS_DEFINES_H_ */
+#endif /* SIFIVE_ARTY_BOARDS_DEFINES_H_ */

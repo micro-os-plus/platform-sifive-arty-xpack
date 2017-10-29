@@ -30,12 +30,14 @@
 
 #include <micro-os-plus/device.h>
 
-#include <sifive-coreplex-arty-boards/defines.h>
+#include <sifive-arty-boards/defines.h>
 
 // Include common declarations.
 #include <riscv-arch/board-functions.h>
+#include <riscv-arch/board-functions-inlines.h>
 
-#include <sifive-coreplex-arty-boards/functions.h>
-#include <sifive-coreplex-arty-boards/functions-inlines.h>
+// Currently not used.
+// #include <sifive-arty-boards/functions.h>
+// #include <sifive-arty-boards/functions-inlines.h>
 
 #endif /* MICRO_OS_PLUS_BOARD_H_ */
