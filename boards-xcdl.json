@@ -23,7 +23,7 @@
 			"features": {
 				"flash": {
 					"size": "128 Mb",
-					"interface": "qspi0",
+					"interface": "spi0",
 					"memoryRegion": "rom"
 				},
 				"hfxtal": "16 MHz",
@@ -68,7 +68,7 @@
             "features": {
                 "flash": {
                     "size": "128 Mb",
-                    "interface": "qspi0",
+                    "interface": "spi0",
                     "memoryRegion": "rom"
                 },
                 "hfxtal": "16 MHz",
