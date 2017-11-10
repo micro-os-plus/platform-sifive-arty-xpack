@@ -34,7 +34,7 @@
   "dependencies": {},
   "xpack": {
     "dependencies": {
-      "@sifive/devices": "~0.1.0"
+      "@sifive/devices": "~0.2.0"
     }
   }
 }
