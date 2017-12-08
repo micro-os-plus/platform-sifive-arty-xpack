@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"boards": {
 		"e31arty": {
-			"vendor": {
+			"supplier": {
 				"name": "sifive",
 				"id": "1",
 				"displayName": "SiFive",
@@ -12,11 +12,13 @@
 			"revision": "1",
 			"url": "https://www.sifive.com/products/risc-v-core-ip/e31/",
 			"orderForm": "https://dev.sifive.com/freedom-soc/evaluate/fpga/",
-			"name": "Freedom E300 Arty FPGA Dev Kit",
+			"displayName": "Freedom E300 Arty FPGA Dev Kit",
 			"description": "The Arty FPGA Dev Kit is an extremely economical ($99) way to jump start your development on RISC-V.",
 			"installedDevice": {
-				"vendor": "sifive",
-				"id": "1",
+				"supplier": {
+					"name": "sifive",
+					"id": "1"
+				},
 				"name": "e31arty"
 			},
 			"compatibleDevices": [],
@@ -34,7 +36,7 @@
 				"connector": "custom",
 				"openocd": "-c &quot;adapter_khz 5000&quot; -f &quot;interface/ftdi/olimex-arm-usb-tiny-h.cfg&quot; -f &quot;board/sifive-e31arty.cfg&quot;",
 				"jlink": {
-				    "device": "e31arty"
+					"device": "e31arty"
 				}
 			},
 			"compile": {
@@ -46,50 +48,52 @@
 				]
 			}
 		},
-        "e51arty": {
-            "vendor": {
-                "name": "sifive",
-                "id": "1",
-                "displayName": "SiFive",
-                "fullName": "SiFive, Inc.",
-                "contact": "info@sifive.com"
-            },
-            "revision": "1",
-            "url": "https://www.sifive.com/products/risc-v-core-ip/e51/",
-            "orderForm": "https://dev.sifive.com/freedom-soc/evaluate/fpga/",
-            "name": "Freedom E300 Arty FPGA Dev Kit",
-            "description": "The Arty FPGA Dev Kit is an extremely economical ($99) way to jump start your development on RISC-V.",
-            "installedDevice": {
-                "vendor": "sifive",
-                "id": "1",
-                "name": "e51arty"
-            },
-            "compatibleDevices": [],
-            "features": {
-                "flash": {
-                    "size": "128 Mb",
-                    "interface": "spi0",
-                    "memoryRegion": "rom"
-                },
-                "hfxtal": "16 MHz",
-                "lfxtal": "32768 Hz"
-            },
-            "debug": {
-                "interface": "jtag",
-                "connector": "custom",
-                "openocd": "-c &quot;adapter_khz 5000&quot; -f &quot;interface/ftdi/olimex-arm-usb-tiny-h.cfg&quot; -f &quot;board/sifive-e51arty.cfg&quot;",
-                "jlink": {
-                    "device": "e51arty"
-                }
-            },
-            "compile": {
-                "headers": [
-                    "<micro-os-plus/board.h>"
-                ],
-                "macros": [
-                    "SIFIVE_E51ARTY_BOARD"
-                ]
-            }
-        }
+		"e51arty": {
+			"supplier": {
+				"name": "sifive",
+				"id": "1",
+				"displayName": "SiFive",
+				"fullName": "SiFive, Inc.",
+				"contact": "info@sifive.com"
+			},
+			"revision": "1",
+			"url": "https://www.sifive.com/products/risc-v-core-ip/e51/",
+			"orderForm": "https://dev.sifive.com/freedom-soc/evaluate/fpga/",
+			"displayName": "Freedom E300 Arty FPGA Dev Kit",
+			"description": "The Arty FPGA Dev Kit is an extremely economical ($99) way to jump start your development on RISC-V.",
+			"installedDevice": {
+				"supplier": {
+					"name": "sifive",
+					"id": "1"
+				},
+				"name": "e51arty"
+			},
+			"compatibleDevices": [],
+			"features": {
+				"flash": {
+					"size": "128 Mb",
+					"interface": "spi0",
+					"memoryRegion": "rom"
+				},
+				"hfxtal": "16 MHz",
+				"lfxtal": "32768 Hz"
+			},
+			"debug": {
+				"interface": "jtag",
+				"connector": "custom",
+				"openocd": "-c &quot;adapter_khz 5000&quot; -f &quot;interface/ftdi/olimex-arm-usb-tiny-h.cfg&quot; -f &quot;board/sifive-e51arty.cfg&quot;",
+				"jlink": {
+					"device": "e51arty"
+				}
+			},
+			"compile": {
+				"headers": [
+					"<micro-os-plus/board.h>"
+				],
+				"macros": [
+					"SIFIVE_E51ARTY_BOARD"
+				]
+			}
+		}
 	}
 }
