@@ -34,6 +34,16 @@
 
 #define OS_INTEGER_TRACE_UART0_BAUD_RATE	(115200)
 
+#if defined (SIFIVE_E31ARTY)
+#define UART_TXCTRL_TXEN SIFIVE_E31ARTY_UART_TXCTRL_TXEN
+#define UART_TXDATA_FULL SIFIVE_E31ARTY_UART_TXDATA_FULL
+#elif defined (SIFIVE_E51ARTY)
+#define UART_TXCTRL_TXEN SIFIVE_E51ARTY_UART_TXCTRL_TXEN
+#define UART_TXDATA_FULL SIFIVE_E51ARTY_UART_TXDATA_FULL
+#else
+#error "Unsupported device"
+#endif
+
 // ----------------------------------------------------------------------------
 
 namespace os
@@ -50,7 +60,7 @@ namespace os
       UART0->div = (riscv::core::running_frequency_hz () / 2
           / OS_INTEGER_TRACE_UART0_BAUD_RATE) - 1;
       // Enable transmitter.
-      UART0->txctrl_bits.txen = 1;
+      UART0->txctrl |= UART_TXCTRL_TXEN;
 
       // Wait a bit to avoid corruption on the UART.
       // (In some cases, switching to the IOF can lead
@@ -84,15 +94,15 @@ namespace os
             {
               // Wait until FIFO is ready...
               // Without handshake, should not block.
-              while (UART0->txdata_bits.full)
+              while ((UART0->txdata | UART_TXDATA_FULL) != 0)
                 ;
-              UART0->txdata_bits.data = '\r';
+              UART0->txdata = '\r';
             }
 
           // Wait until FIFO is ready...
-          while (UART0->txdata_bits.full)
+          while ((UART0->txdata | UART_TXDATA_FULL) != 0)
             ;
-          UART0->txdata_bits.data = ch;
+          UART0->txdata = ch;
         }
 
       // All characters successfully sent.
