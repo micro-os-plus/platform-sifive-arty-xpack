@@ -2,6 +2,12 @@
 
 Changes in reverse chronological order.
 
+### 2017-12-08
+
+* rework boards xcdl
+  * rename "vendor" -> "supplier"
+  * use "displayName" for boards
+
 ### v0.1.0 (2017-10-26)
 
 * update for new GitHub names
