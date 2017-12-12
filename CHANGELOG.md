@@ -2,6 +2,10 @@
 
 Changes in reverse chronological order.
 
+### 2017-12-12
+
+* [#2] trace-uart.cpp: replace bitfields with masks
+
 ### 2017-12-08
 
 * rework boards xcdl
