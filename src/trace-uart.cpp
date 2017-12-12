@@ -94,13 +94,13 @@ namespace os
             {
               // Wait until FIFO is ready...
               // Without handshake, should not block.
-              while ((UART0->txdata | UART_TXDATA_FULL) != 0)
+              while ((UART0->txdata & UART_TXDATA_FULL) != 0)
                 ;
               UART0->txdata = '\r';
             }
 
           // Wait until FIFO is ready...
-          while ((UART0->txdata | UART_TXDATA_FULL) != 0)
+          while ((UART0->txdata & UART_TXDATA_FULL) != 0)
             ;
           UART0->txdata = ch;
         }
