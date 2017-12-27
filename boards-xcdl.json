@@ -1,22 +1,19 @@
 {
-	"schemaVersion": "0.1.0",
+	"schemaVersion": "0.2.0",
 	"boards": {
 		"e31arty": {
+			"displayName": "Freedom E300 Arty FPGA Dev Kit",
+			"description": "The Arty FPGA Dev Kit is an extremely economical ($99) way to jump start your development on RISC-V.",
 			"supplier": {
-				"name": "sifive",
-				"id": "1",
 				"displayName": "SiFive",
-				"fullName": "SiFive, Inc.",
-				"contact": "info@sifive.com"
+				"id": "1"
 			},
 			"revision": "1",
 			"url": "https://www.sifive.com/products/risc-v-core-ip/e31/",
 			"orderForm": "https://dev.sifive.com/freedom-soc/evaluate/fpga/",
-			"displayName": "Freedom E300 Arty FPGA Dev Kit",
-			"description": "The Arty FPGA Dev Kit is an extremely economical ($99) way to jump start your development on RISC-V.",
 			"installedDevice": {
 				"supplier": {
-					"name": "sifive",
+					"displayName": "SiFive",
 					"id": "1"
 				},
 				"name": "e31arty"
@@ -39,31 +36,28 @@
 					"device": "e31arty"
 				}
 			},
-			"compile": {
+			"compiler": {
 				"headers": [
 					"<micro-os-plus/board.h>"
 				],
-				"macros": [
+				"defines": [
 					"SIFIVE_E31ARTY_BOARD"
 				]
 			}
 		},
 		"e51arty": {
+			"displayName": "Freedom E300 Arty FPGA Dev Kit",
+			"description": "The Arty FPGA Dev Kit is an extremely economical ($99) way to jump start your development on RISC-V.",
 			"supplier": {
-				"name": "sifive",
-				"id": "1",
 				"displayName": "SiFive",
-				"fullName": "SiFive, Inc.",
-				"contact": "info@sifive.com"
+				"id": "1"
 			},
 			"revision": "1",
 			"url": "https://www.sifive.com/products/risc-v-core-ip/e51/",
 			"orderForm": "https://dev.sifive.com/freedom-soc/evaluate/fpga/",
-			"displayName": "Freedom E300 Arty FPGA Dev Kit",
-			"description": "The Arty FPGA Dev Kit is an extremely economical ($99) way to jump start your development on RISC-V.",
 			"installedDevice": {
 				"supplier": {
-					"name": "sifive",
+					"displayName": "SiFive",
 					"id": "1"
 				},
 				"name": "e51arty"
@@ -86,11 +80,11 @@
 					"device": "e51arty"
 				}
 			},
-			"compile": {
+			"compiler": {
 				"headers": [
 					"<micro-os-plus/board.h>"
 				],
-				"macros": [
+				"defines": [
 					"SIFIVE_E51ARTY_BOARD"
 				]
 			}
