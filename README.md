@@ -8,6 +8,11 @@ The standard way to include the board files is
 #include <micro-os-plus/board.h>
 ```
 
+### Macros
+
+* `SIFIVE_E31ARTY_BOARD`
+* `SIFIVE_E51ARTY_BOARD`
+
 ## E31/E51 Core Complex FPGA Eval Kit Clock and Reset
 
 The E31/E51 Core Complex FPGA Eval Kit has a 100MHz input to the FPGA. This is used to derive the Core Complex’s `io_coreClock` at 65 MHz, and the clock (peripheral clock) at 32.5 MHz. The `io_rtcToggle` is driven at approximately 32kHz.
