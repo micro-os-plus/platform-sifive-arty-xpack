@@ -1,6 +1,6 @@
 {
   "name": "@sifive/arty-boards",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An xPack with the µOS++ support for the SiFive Core Complex Arty boards",
   "main": "",
   "scripts": {
