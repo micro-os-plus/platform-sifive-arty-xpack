@@ -1,5 +1,32 @@
 ## SiFive Core Complex IP Arty boards specific files
 
+This project provides support for the SiFive synthesised E31/E51 devices 
+running on the Arty development board.
+
+## Developer info
+
+This section is intended to developers who plan to include this library in their own projects.
+
+### Prerequisites
+
+A recent [`xpm`](https://www.npmjs.com/package/xpm), which is a portable [Node.js](https://nodejs.org/) command line application.
+
+Compiling the source code requires a modern C++ compiler, preferably GCC 5 or higher. 
+
+### Easy install
+
+This package is available as [`@sifive/arty-boards`](https://www.npmjs.com/package/@sifive/arty-boards) from the `npmjs.com` registry; with `xpm` available, installing the latest version of the package is quite easy:
+
+```console
+$ xpm install @sifive/arty-boards
+```
+
+This package is also available from [GitHub](https://github.com/micro-os-plus/sifive-arty-boards-xpack):
+
+```console
+$ git clone https://github.com/micro-os-plus/sifive-arty-boards-xpack.git sifive-arty-boards-xpack.git
+```
+
 ### How to use
 
 The standard way to include the board files is
@@ -13,7 +40,7 @@ The standard way to include the board files is
 * `SIFIVE_E31ARTY_BOARD`
 * `SIFIVE_E51ARTY_BOARD`
 
-## E31/E51 Core Complex FPGA Eval Kit Clock and Reset
+### E31/E51 Core Complex FPGA Eval Kit Clock and Reset
 
 The E31/E51 Core Complex FPGA Eval Kit has a 100MHz input to the FPGA. This is used to derive the Core Complex’s `io_coreClock` at 65 MHz, and the clock (peripheral clock) at 32.5 MHz. The `io_rtcToggle` is driven at approximately 32kHz.
 
@@ -21,7 +48,7 @@ The system reset driven by the Reset Button on the evaluation board is combined 
 
 The reset vector is set with Switch 0. Leave the switch in the “Off” position to execute from SPI Flash.
 
-## Global interrupts
+### Global interrupts
 
 - UART TX/RX	1
 - SWITCH 0 2
@@ -50,35 +77,7 @@ The reset vector is set with Switch 0. Leave the switch in the “Off” positio
 - PWM CMP[2] LED 1 GREEN 25
 - PWM CMP[3] LED 1 BLUE 26
 
-## Developer info
-
-This section is intended to developers who plan to include this library in their own projects.
-
-### Easy install
-
-This package can be installed from the `npm` [registry](https://www.npmjs.com/package/@micro-os-plus/sifive-arty-boards).
-
-```console
-$ xpm install @micro-os-plus/sifive-arty-boards
-```
-
-This package is also available from [GitHub](https://github.com/micro-os-plus/sifive-arty-boards-xpack):
-
-```console
-$ git clone https://github.com/micro-os-plus/sifive-arty-boards-xpack.git sifive-arty-boards-xpack.git
-```
-
-### Prerequisites
-
-Installing from `npm` registry requires a recent [Node.js](https://nodejs.org) (>7.x; the 6.x LTS version is not compatible), and the `xpm` tool (https://www.npmjs.com/package/xpm).
-
-```console
-$ sudo npm install xpm --global
-```
-
-On Windows, global packages are installed in the user home folder, and do not require `sudo`.
-
-Compiling the source code require a modern C++ compiler, preferably GCC 5 or higher, but was also compiled with GCC 4.8. 
+## Maintainer info
 
 ### How to publish
 
