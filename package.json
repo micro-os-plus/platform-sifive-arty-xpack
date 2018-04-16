@@ -31,10 +31,8 @@
     "url": "https://github.com/micro-os-plus/sifive-arty-boards-xpack/issues"
   },
   "config": {},
-  "dependencies": {},
-  "xpack": {
-    "dependencies": {
-      "@sifive/devices": "~1.0.1"
-    }
-  }
+  "dependencies": {
+    "@sifive/devices": "~1.0.2"
+  },
+  "xpack": {}
 }
