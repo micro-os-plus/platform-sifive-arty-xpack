@@ -1,27 +1,34 @@
 ## SiFive Core Complex IP Arty boards specific files
 
-This project provides support for the SiFive synthesised E31/E51 devices 
+This project provides support for the SiFive synthesised E31/E51 devices
 running on the Arty development board.
 
 ## Developer info
 
-This section is intended to developers who plan to include this library in their own projects.
+This section is intended to developers who plan to include this
+library in their own projects.
 
 ### Prerequisites
 
-A recent [`xpm`](https://www.npmjs.com/package/xpm), which is a portable [Node.js](https://nodejs.org/) command line application.
+A recent [`xpm`](https://www.npmjs.com/package/xpm), which is a
+portable [Node.js](https://nodejs.org/) command line application.
 
-Compiling the source code requires a modern C++ compiler, preferably GCC 5 or higher. 
+Compiling the source code requires a modern C++ compiler, preferably
+GCC 5 or higher. 
 
 ### Easy install
 
-This package is available as [`@sifive/arty-boards`](https://www.npmjs.com/package/@sifive/arty-boards) from the `npmjs.com` registry; with `xpm` available, installing the latest version of the package is quite easy:
+This package is available as
+[`@sifive/arty-boards`](https://www.npmjs.com/package/@sifive/arty-boards)
+from the `npmjs.com` registry; with `xpm` available, installing the
+latest version of the package is quite easy:
 
 ```console
-$ xpm install @sifive/arty-boards
+$ xpm install @sifive/arty-boards@latest
 ```
 
-This package is also available from [GitHub](https://github.com/micro-os-plus/sifive-arty-boards-xpack):
+This package is also available from
+[GitHub](https://github.com/micro-os-plus/sifive-arty-boards-xpack):
 
 ```console
 $ git clone https://github.com/micro-os-plus/sifive-arty-boards-xpack.git sifive-arty-boards-xpack.git
@@ -37,16 +44,23 @@ The standard way to include the board files is
 
 ### Macros
 
-* `SIFIVE_E31ARTY_BOARD`
-* `SIFIVE_E51ARTY_BOARD`
+- `SIFIVE_E31ARTY_BOARD`
+- `SIFIVE_E51ARTY_BOARD`
 
 ### E31/E51 Core Complex FPGA Eval Kit Clock and Reset
 
-The E31/E51 Core Complex FPGA Eval Kit has a 100MHz input to the FPGA. This is used to derive the Core Complex’s `io_coreClock` at 65 MHz, and the clock (peripheral clock) at 32.5 MHz. The `io_rtcToggle` is driven at approximately 32kHz.
+The E31/E51 Core Complex FPGA Eval Kit has a 100MHz input to the
+FPGA. This is used to derive the Core Complex’s `io_coreClock` at
+65 MHz, and the clock (peripheral clock) at 32.5 MHz. The
+`io_rtcToggle` is driven at approximately 32kHz.
 
-The system reset driven by the Reset Button on the evaluation board is combined with the external debugger’s `SRST_n` pin as a full system reset for the E31/E51 Core Complex FPGA Eval KitT ̇his is combined with the `io_ndreset` to drive the reset input to the Core Complex.
+The system reset driven by the Reset Button on the evaluation board
+is combined with the external debugger’s `SRST_n` pin as a full
+system reset for the E31/E51 Core Complex FPGA Eval KitT ̇his is
+combined with the `io_ndreset` to drive the reset input to the Core Complex.
 
-The reset vector is set with Switch 0. Leave the switch in the “Off” position to execute from SPI Flash.
+The reset vector is set with Switch 0. Leave the switch in the
+“Off” position to execute from SPI Flash.
 
 ### Global interrupts
 
@@ -81,12 +95,14 @@ The reset vector is set with Switch 0. Leave the switch in the “Off” positio
 
 ### How to publish
 
-* commit all changes
-* update `CHANGELOG.md`; commit with a message like _CHANGELOG: prepare v0.1.2_
-* `npm version patch`
-* push all changes to GitHub
-* `npm publish`
+- commit all changes
+- update `CHANGELOG.md`; commit with a message like _CHANGELOG: prepare v0.1.2_
+- `npm version patch`
+- push all changes to GitHub
+- `npm publish`
 
 ## License
 
-The original content is released under the [MIT License](https://opensource.org/licenses/MIT), with all rights reserved to [Liviu Ionescu](https://github.com/ilg-ul).
+The original content is released under the
+[MIT License](https://opensource.org/licenses/MIT), with all rights reserved to
+[Liviu Ionescu](https://github.com/ilg-ul).
