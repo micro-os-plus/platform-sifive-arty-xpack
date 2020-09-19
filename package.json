@@ -24,7 +24,7 @@
   "author": {
     "name": "Liviu Ionescu",
     "email": "ilg@livius.net",
-    "url": "http://liviusdotnet.wordpress.com"
+    "url": "https://github.com/ilg-ul"
   },
   "license": "MIT",
   "bugs": {
@@ -32,7 +32,7 @@
   },
   "config": {},
   "dependencies": {
-    "@sifive/devices": "~1.0.2"
+    "@sifive/devices": "~1.0.3"
   },
   "xpack": {}
 }
