@@ -1,4 +1,8 @@
-## SiFive Core Complex IP Arty boards specific files
+[![license](https://img.shields.io/github/license/micro-os-plus/sifive-arty-boards-xpack)](https://github.com/micro-os-plus/sifive-arty-boards-xpack/blob/xpack/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/micro-os-plus/sifive-arty-boards-xpack.svg)](https://github.com/micro-os-plus/sifive-arty-boards-xpack/issues)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/micro-os-plus/sifive-arty-boards-xpack.svg)](https://github.com/micro-os-plus/sifive-arty-boards-xpack/pulls)
+
+# SiFive Core Complex IP Arty boards specific files
 
 This project provides support for the SiFive synthesised E31/E51 devices
 running on the Arty development board.
