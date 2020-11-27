@@ -25,8 +25,8 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SIFIVE_ARTY_BOARDS_DEFINES_H_
-#define SIFIVE_ARTY_BOARDS_DEFINES_H_
+#ifndef MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_DEFINES_H_
+#define MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_DEFINES_H_
 
 // ----------------------------------------------------------------------------
 
@@ -38,7 +38,7 @@
 
 // ----------------------------------------------------------------------------
 
-#define RISCV_BOARD_RTC_FREQUENCY_HZ		(32768)
+#define RISCV_PLATFORM_RTC_FREQUENCY_HZ		(32768)
 
 // ----------------------------------------------------------------------------
 // Definitions from SiFive bsp/env/coreplexip-arty.h
@@ -65,7 +65,7 @@
 
 // These are the buttons which are mapped as inputs.
 
-#define HAS_BOARD_BUTTONS
+#define HAS_PLATFORM_BUTTONS
 
 // The buttons are active high.
 #define BUTTON_0_OFFSET  4
@@ -163,4 +163,4 @@
 
 // ----------------------------------------------------------------------------
 
-#endif /* SIFIVE_ARTY_BOARDS_DEFINES_H_ */
+#endif /* MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_DEFINES_H_ */

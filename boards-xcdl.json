@@ -40,7 +40,7 @@
 			},
 			"compiler": {
 				"headers": [
-					"<micro-os-plus/board.h>"
+					"<micro-os-plus/platform.h>"
 				],
 				"defines": [
 					"SIFIVE_E31ARTY_BOARD"
@@ -84,7 +84,7 @@
 			},
 			"compiler": {
 				"headers": [
-					"<micro-os-plus/board.h>"
+					"<micro-os-plus/platform.h>"
 				],
 				"defines": [
 					"SIFIVE_E51ARTY_BOARD"

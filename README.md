@@ -1,6 +1,6 @@
-[![license](https://img.shields.io/github/license/micro-os-plus/sifive-arty-boards-xpack)](https://github.com/micro-os-plus/sifive-arty-boards-xpack/blob/xpack/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/micro-os-plus/sifive-arty-boards-xpack.svg)](https://github.com/micro-os-plus/sifive-arty-boards-xpack/issues)
-[![GitHub pulls](https://img.shields.io/github/issues-pr/micro-os-plus/sifive-arty-boards-xpack.svg)](https://github.com/micro-os-plus/sifive-arty-boards-xpack/pulls)
+[![license](https://img.shields.io/github/license/micro-os-plus/platform-arty-xpack)](https://github.com/micro-os-plus/platform-arty-xpack/blob/xpack/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/micro-os-plus/platform-arty-xpack.svg)](https://github.com/micro-os-plus/platform-arty-xpack/issues)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/micro-os-plus/platform-arty-xpack.svg)](https://github.com/micro-os-plus/platform-arty-xpack/pulls)
 
 # SiFive Core Complex IP Arty boards specific files
 
@@ -32,10 +32,10 @@ $ xpm install @sifive/arty-boards@latest
 ```
 
 This package is also available from
-[GitHub](https://github.com/micro-os-plus/sifive-arty-boards-xpack):
+[GitHub](https://github.com/micro-os-plus/platform-arty-xpack):
 
 ```console
-$ git clone https://github.com/micro-os-plus/sifive-arty-boards-xpack.git sifive-arty-boards-xpack.git
+$ git clone https://github.com/micro-os-plus/platform-arty-xpack.git platform-arty-xpack.git
 ```
 
 ### How to use
@@ -43,7 +43,7 @@ $ git clone https://github.com/micro-os-plus/sifive-arty-boards-xpack.git sifive
 The standard way to include the board files is
 
 ```c
-#include <micro-os-plus/board.h>
+#include <micro-os-plus/platform.h>
 ```
 
 ### Macros

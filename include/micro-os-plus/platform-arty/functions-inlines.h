@@ -25,19 +25,50 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef MICRO_OS_PLUS_BOARD_H_
-#define MICRO_OS_PLUS_BOARD_H_
+#ifndef MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
+#define MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
 
-#include <micro-os-plus/device.h>
+#include <stdint.h>
 
-#include <sifive-arty-boards/defines.h>
+/*
+ * Arty support functions.
+ *
+ * Inline functions are first defined in C (prefixed with `riscv_board_`),
+ * then, for convenience, are redefined in C++ in the `riscv::board::`
+ * namespace.
+ *
+ * Regular functions are first defined in C++ then aliased to C.
+ */
 
-// Include common declarations.
-#include <riscv-arch/board-functions.h>
-#include <riscv-arch/board-functions-inlines.h>
+// ----------------------------------------------------------------------------
+#if defined(__cplusplus)
+extern "C"
+{
+#endif /* defined(__cplusplus) */
 
-// Currently not used.
-// #include <sifive-arty-boards/functions.h>
-// #include <sifive-arty-boards/functions-inlines.h>
 
-#endif /* MICRO_OS_PLUS_BOARD_H_ */
+#if defined(__cplusplus)
+}
+#endif /* defined(__cplusplus) */
+
+// ----------------------------------------------------------------------------
+
+#if defined(__cplusplus)
+
+namespace riscv
+{
+  namespace board
+  {
+    // ------------------------------------------------------------------------
+
+
+  } /* namespace board */
+
+// ----------------------------------------------------------------------------
+} /* namespace riscv */
+
+#endif /* defined(__cplusplus) */
+
+// ----------------------------------------------------------------------------
+
+#endif /* MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_ */

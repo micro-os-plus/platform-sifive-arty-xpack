@@ -25,10 +25,10 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SIFIVE_ARTY_BOARDS_FUNCTIONS_H_
-#define SIFIVE_ARTY_BOARDS_FUNCTIONS_H_
+#ifndef MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_H_
+#define MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_H_
 
-#include <sifive-arty-boards/defines.h>
+#include <platform-arty/defines.h>
 
 #include <stdint.h>
 
@@ -79,4 +79,4 @@ namespace riscv
 
 // ----------------------------------------------------------------------------
 
-#endif /* SIFIVE_ARTY_BOARDS_FUNCTIONS_H_ */
+#endif /* MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_H_ */

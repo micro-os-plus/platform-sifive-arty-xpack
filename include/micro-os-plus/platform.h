@@ -25,50 +25,19 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
-#define SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
+#ifndef MICRO_OS_PLUS_PLATFORM_H_
+#define MICRO_OS_PLUS_PLATFORM_H_
 
-#include <stdint.h>
+#include <micro-os-plus/device.h>
 
-/*
- * Arty support functions.
- *
- * Inline functions are first defined in C (prefixed with `riscv_board_`),
- * then, for convenience, are redefined in C++ in the `riscv::board::`
- * namespace.
- *
- * Regular functions are first defined in C++ then aliased to C.
- */
+#include <micro-os-plus/platform-arty/defines.h>
 
-// ----------------------------------------------------------------------------
-#if defined(__cplusplus)
-extern "C"
-{
-#endif /* defined(__cplusplus) */
+// Include common declarations.
+#include <micro-os-plus/architecture-riscv/board-functions.h>
+#include <micro-os-plus/architecture-riscv/board-functions-inlines.h>
 
+// Currently not used.
+// #include <platform-arty/functions.h>
+// #include <platform-arty/functions-inlines.h>
 
-#if defined(__cplusplus)
-}
-#endif /* defined(__cplusplus) */
-
-// ----------------------------------------------------------------------------
-
-#if defined(__cplusplus)
-
-namespace riscv
-{
-  namespace board
-  {
-    // ------------------------------------------------------------------------
-
-
-  } /* namespace board */
-
-// ----------------------------------------------------------------------------
-} /* namespace riscv */
-
-#endif /* defined(__cplusplus) */
-
-// ----------------------------------------------------------------------------
-
-#endif /* SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_ */
+#endif /* MICRO_OS_PLUS_PLATFORM_H_ */
