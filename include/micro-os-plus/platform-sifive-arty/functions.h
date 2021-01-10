@@ -28,7 +28,7 @@
 #ifndef MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_H_
 #define MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_H_
 
-#include <platform-arty/defines.h>
+#include <platform-sifive-arty/defines.h>
 
 #include <stdint.h>
 
