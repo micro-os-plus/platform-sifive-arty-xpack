@@ -41,3 +41,5 @@
 // #include <micro-os-plus/platform-sifive-arty/functions-inlines.h>
 
 #endif /* MICRO_OS_PLUS_PLATFORM_H_ */
+
+// ----------------------------------------------------------------------------
