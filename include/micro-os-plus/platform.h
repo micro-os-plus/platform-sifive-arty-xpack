@@ -33,8 +33,8 @@
 #include <micro-os-plus/platform-sifive-arty/defines.h>
 
 // Include common declarations.
-#include <micro-os-plus/architecture-riscv/board-functions.h>
 #include <micro-os-plus/architecture-riscv/board-functions-inlines.h>
+#include <micro-os-plus/architecture-riscv/board-functions.h>
 
 // Currently not used.
 // #include <micro-os-plus/platform-sifive-arty/functions.h>
