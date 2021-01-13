@@ -25,6 +25,10 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#if defined(__riscv)
+
+// ----------------------------------------------------------------------------
+
 #if defined(TRACE)
 
 #if defined(OS_USE_TRACE_UART0)
@@ -123,6 +127,10 @@ namespace os
 
 #endif /* defined(OS_USE_TRACE_UART0) */
 #endif /* defined(TRACE) */
+
+// ----------------------------------------------------------------------------
+
+#endif /* defined(__riscv) */
 
 // ----------------------------------------------------------------------------
 
