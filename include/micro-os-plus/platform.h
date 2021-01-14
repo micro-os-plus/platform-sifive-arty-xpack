@@ -28,6 +28,8 @@
 #ifndef MICRO_OS_PLUS_PLATFORM_H_
 #define MICRO_OS_PLUS_PLATFORM_H_
 
+// ----------------------------------------------------------------------------
+
 #include <micro-os-plus/device.h>
 
 #include <micro-os-plus/platform-sifive-arty/defines.h>
@@ -39,6 +41,8 @@
 // Currently not used.
 // #include <micro-os-plus/platform-sifive-arty/functions.h>
 // #include <micro-os-plus/platform-sifive-arty/functions-inlines.h>
+
+// ----------------------------------------------------------------------------
 
 #endif /* MICRO_OS_PLUS_PLATFORM_H_ */
 

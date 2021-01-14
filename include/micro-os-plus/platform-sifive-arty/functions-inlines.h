@@ -28,7 +28,11 @@
 #ifndef MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
 #define MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_FUNCTIONS_INLINES_H_
 
+// ----------------------------------------------------------------------------
+
 #include <stdint.h>
+
+// ----------------------------------------------------------------------------
 
 /*
  * Arty support functions.
@@ -46,7 +50,6 @@ extern "C"
 {
 #endif /* defined(__cplusplus) */
 
-
 #if defined(__cplusplus)
 }
 #endif /* defined(__cplusplus) */
@@ -61,11 +64,10 @@ namespace riscv
   {
     // ------------------------------------------------------------------------
 
+  }
 
-  } /* namespace board */
-
-// ----------------------------------------------------------------------------
-} /* namespace riscv */
+  // --------------------------------------------------------------------------
+} // namespace riscv
 
 #endif /* defined(__cplusplus) */
 

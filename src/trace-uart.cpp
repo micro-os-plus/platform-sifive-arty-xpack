@@ -36,12 +36,12 @@
 #include <micro-os-plus/device.h>
 #include <micro-os-plus/diag/trace.h>
 
-#define OS_INTEGER_TRACE_UART0_BAUD_RATE	(115200)
+#define OS_INTEGER_TRACE_UART0_BAUD_RATE (115200)
 
-#if defined (SIFIVE_E31ARTY)
+#if defined(SIFIVE_E31ARTY)
 #define UART_TXCTRL_TXEN SIFIVE_E31ARTY_UART_TXCTRL_TXEN
 #define UART_TXDATA_FULL SIFIVE_E31ARTY_UART_TXDATA_FULL
-#elif defined (SIFIVE_E51ARTY)
+#elif defined(SIFIVE_E51ARTY)
 #define UART_TXCTRL_TXEN SIFIVE_E51ARTY_UART_TXCTRL_TXEN
 #define UART_TXDATA_FULL SIFIVE_E51ARTY_UART_TXDATA_FULL
 #else
@@ -62,7 +62,8 @@ namespace os
       // Set baud rate.
       // Arty boards have the peripheral clock at half the core clock.
       UART0->div = (riscv::core::running_frequency_hz () / 2
-          / OS_INTEGER_TRACE_UART0_BAUD_RATE) - 1;
+                    / OS_INTEGER_TRACE_UART0_BAUD_RATE)
+                   - 1;
       // Enable transmitter.
       UART0->txctrl |= UART_TXCTRL_TXEN;
 
@@ -88,7 +89,7 @@ namespace os
           return 0;
         }
 
-      const char* cbuf = (const char*) buf;
+      const char* cbuf = (const char*)buf;
 
       for (size_t i = 0; i < nbyte; i++)
         {
@@ -110,7 +111,7 @@ namespace os
         }
 
       // All characters successfully sent.
-      return (ssize_t) nbyte;
+      return (ssize_t)nbyte;
     }
 
     // ------------------------------------------------------------------------
@@ -121,9 +122,9 @@ namespace os
       ; // TODO flush port
     }
 
-  // --------------------------------------------------------------------------
-  } /* namespace trace */
-} /* namespace os */
+    // ------------------------------------------------------------------------
+  } // namespace trace
+} // namespace os
 
 #endif /* defined(OS_USE_TRACE_UART0) */
 #endif /* defined(TRACE) */

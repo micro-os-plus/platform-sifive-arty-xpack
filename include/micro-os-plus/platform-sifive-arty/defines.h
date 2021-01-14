@@ -38,7 +38,7 @@
 
 // ----------------------------------------------------------------------------
 
-#define RISCV_PLATFORM_RTC_FREQUENCY_HZ		(32768)
+#define RISCV_PLATFORM_RTC_FREQUENCY_HZ (32768)
 
 // ----------------------------------------------------------------------------
 // Definitions from SiFive bsp/env/coreplexip-arty.h
@@ -54,24 +54,24 @@
 // Additional RGB LEDs are driven by the 3 PWM outputs.
 
 // The LEDs are active high.
-#define RED_LED_OFFSET   0
+#define RED_LED_OFFSET 0
 #define GREEN_LED_OFFSET 1
-#define BLUE_LED_OFFSET  2
+#define BLUE_LED_OFFSET 2
 
 // Switch 3 is used as a GPIO input. (Switch 0 is used to set
 // the reset vector, the other switches are unused).
 
-#define SW_3_OFFSET      3
+#define SW_3_OFFSET 3
 
 // These are the buttons which are mapped as inputs.
 
 #define HAS_PLATFORM_BUTTONS
 
 // The buttons are active high.
-#define BUTTON_0_OFFSET  4
-#define BUTTON_1_OFFSET  5
-#define BUTTON_2_OFFSET  6
-#define BUTTON_3_OFFSET  7
+#define BUTTON_0_OFFSET 4
+#define BUTTON_1_OFFSET 5
+#define BUTTON_2_OFFSET 6
+#define BUTTON_3_OFFSET 7
 
 // These are the bit offsets for the different GPIO pins
 // mapped onto the PMOD A header.
@@ -97,9 +97,9 @@
 //   a) The corresponding GPIO pin must be configured as in input
 //   b) The "interrupt on fall" bit must be set for the GPIO pin
 // 2) Steps which would also need to be performed for the delivery coreplex:
-//   a) The corresponding global interrupt, priority, and threshold must be configured in the PLIC.
-//   b) The external interrupt bit must be enabled in MSTATUS
-//   c) Interrupts must be enabled globally in the core.
+//   a) The corresponding global interrupt, priority, and threshold must be
+//   configured in the PLIC. b) The external interrupt bit must be enabled in
+//   MSTATUS c) Interrupts must be enabled globally in the core.
 
 // Any of the above GPIO pins can be used as global interrupt
 // sources by adding their offset to the INT_GPIO_BASE.
@@ -107,17 +107,25 @@
 
 #if defined(SIFIVE_E31ARTY_BOARD)
 
-#define INT_DEVICE_BUTTON_0 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_0_OFFSET)
-#define INT_DEVICE_BUTTON_1 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_1_OFFSET)
-#define INT_DEVICE_BUTTON_2 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_2_OFFSET)
-#define INT_DEVICE_BUTTON_3 (sifive_e31arty_interrupt_global_gpio0 + BUTTON_3_OFFSET)
+#define INT_DEVICE_BUTTON_0 \
+  (sifive_e31arty_interrupt_global_gpio0 + BUTTON_0_OFFSET)
+#define INT_DEVICE_BUTTON_1 \
+  (sifive_e31arty_interrupt_global_gpio0 + BUTTON_1_OFFSET)
+#define INT_DEVICE_BUTTON_2 \
+  (sifive_e31arty_interrupt_global_gpio0 + BUTTON_2_OFFSET)
+#define INT_DEVICE_BUTTON_3 \
+  (sifive_e31arty_interrupt_global_gpio0 + BUTTON_3_OFFSET)
 
 #elif defined(SIFIVE_E51ARTY_BOARD)
 
-#define INT_DEVICE_BUTTON_0 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_0_OFFSET)
-#define INT_DEVICE_BUTTON_1 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_1_OFFSET)
-#define INT_DEVICE_BUTTON_2 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_2_OFFSET)
-#define INT_DEVICE_BUTTON_3 (sifive_e51arty_interrupt_global_gpio0 + BUTTON_3_OFFSET)
+#define INT_DEVICE_BUTTON_0 \
+  (sifive_e51arty_interrupt_global_gpio0 + BUTTON_0_OFFSET)
+#define INT_DEVICE_BUTTON_1 \
+  (sifive_e51arty_interrupt_global_gpio0 + BUTTON_1_OFFSET)
+#define INT_DEVICE_BUTTON_2 \
+  (sifive_e51arty_interrupt_global_gpio0 + BUTTON_2_OFFSET)
+#define INT_DEVICE_BUTTON_3 \
+  (sifive_e51arty_interrupt_global_gpio0 + BUTTON_3_OFFSET)
 
 #endif
 
@@ -142,22 +150,22 @@
 
 // This gives the mapping from inputs to LOCAL interrupts.
 
-#define LOCAL_INT_SW_0   0
-#define LOCAL_INT_SW_1   1
-#define LOCAL_INT_SW_2   2
-#define LOCAL_INT_SW_3   3
-#define LOCAL_INT_BTN_0  4
-#define LOCAL_INT_BTN_1  5
-#define LOCAL_INT_BTN_2  6
-#define LOCAL_INT_BTN_3  7
-#define LOCAL_INT_JA_0   8
-#define LOCAL_INT_JA_1   9
-#define LOCAL_INT_JA_2   10
-#define LOCAL_INT_JA_3   11
-#define LOCAL_INT_JA_4   12
-#define LOCAL_INT_JA_5   13
-#define LOCAL_INT_JA_6   14
-#define LOCAL_INT_JA_7   15
+#define LOCAL_INT_SW_0 0
+#define LOCAL_INT_SW_1 1
+#define LOCAL_INT_SW_2 2
+#define LOCAL_INT_SW_3 3
+#define LOCAL_INT_BTN_0 4
+#define LOCAL_INT_BTN_1 5
+#define LOCAL_INT_BTN_2 6
+#define LOCAL_INT_BTN_3 7
+#define LOCAL_INT_JA_0 8
+#define LOCAL_INT_JA_1 9
+#define LOCAL_INT_JA_2 10
+#define LOCAL_INT_JA_3 11
+#define LOCAL_INT_JA_4 12
+#define LOCAL_INT_JA_5 13
+#define LOCAL_INT_JA_6 14
+#define LOCAL_INT_JA_7 15
 
 // #define RTC_FREQ 32768
 
