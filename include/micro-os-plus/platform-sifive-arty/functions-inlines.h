@@ -46,6 +46,7 @@ extern "C"
 {
 #endif /* defined(__cplusplus) */
 
+
 #if defined(__cplusplus)
 }
 #endif /* defined(__cplusplus) */
@@ -56,11 +57,12 @@ extern "C"
 
 namespace riscv
 {
-namespace board
-{
-// ----------------------------------------------------------------------------
+  namespace board
+  {
+    // ------------------------------------------------------------------------
 
-} /* namespace board */
+
+  } /* namespace board */
 
 // ----------------------------------------------------------------------------
 } /* namespace riscv */
