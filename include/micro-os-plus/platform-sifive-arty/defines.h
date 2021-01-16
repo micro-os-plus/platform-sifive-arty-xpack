@@ -34,7 +34,7 @@
 #elif defined(SIFIVE_E51ARTY_BOARD)
 #else
 #error "Only SIFIVE_E31ARTY_BOARD and SIFIVE_E51ARTY_BOARD are supported."
-#endif /* _BOARD */
+#endif // _BOARD
 
 // ----------------------------------------------------------------------------
 
@@ -171,6 +171,6 @@
 
 // ----------------------------------------------------------------------------
 
-#endif /* MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_DEFINES_H_ */
+#endif // MICRO_OS_PLUS_SIFIVE_ARTY_BOARDS_DEFINES_H_
 
 // ----------------------------------------------------------------------------
