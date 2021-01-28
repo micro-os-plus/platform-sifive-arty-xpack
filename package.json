@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/micro-os-plus/platform-sifive-arty-xpack.git"
+    "url": "git+https://github.com/micro-os-plus/platform-sifive-arty-xpack.git/"
   },
-  "homepage": "https://github.com/micro-os-plus/platform-sifive-arty-xpack",
+  "homepage": "https://github.com/micro-os-plus/platform-sifive-arty-xpack/",
   "keywords": [
     "xpack",
     "c++",
@@ -31,8 +31,6 @@
     "url": "https://github.com/micro-os-plus/platform-sifive-arty-xpack/issues/"
   },
   "config": {},
-  "dependencies": {
-    "@sifive/devices": "~1.0.3"
-  },
+  "dependencies": {},
   "xpack": {}
 }
