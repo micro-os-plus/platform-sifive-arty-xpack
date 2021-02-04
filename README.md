@@ -1,16 +1,21 @@
-[![license](https://img.shields.io/github/license/micro-os-plus/platform-arty-xpack)](https://github.com/micro-os-plus/platform-arty-xpack/blob/xpack/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/micro-os-plus/platform-arty-xpack.svg)](https://github.com/micro-os-plus/platform-arty-xpack/issues)
-[![GitHub pulls](https://img.shields.io/github/issues-pr/micro-os-plus/platform-arty-xpack.svg)](https://github.com/micro-os-plus/platform-arty-xpack/pulls)
+[![license](https://img.shields.io/github/license/micro-os-plus/platform-sifive-arty-xpack)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/blob/xpack/LICENSE)
+[![CI on Push](https://github.com/micro-os-plus/platform-sifive-arty-xpack/workflows/CI%20on%20Push/badge.svg)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/actions?query=workflow%3A%22CI+on+Push%22)
 
-# SiFive Core Complex IP Arty boards specific files
+# A source xPack with the µOS++ SiFive Core Complex IP Arty boards specific files
 
 This project provides support for the SiFive synthesised E31/E51 devices
 running on the Arty development board.
 
-## Developer info
+The project is hosted on GitHub as
+[micro-os-plus/platform-sifive-arty-xpack](https://github.com/micro-os-plus/platform-sifive-arty-xpack).
 
-This section is intended to developers who plan to include this
-library in their own projects.
+## Maintainer info
+
+This page is addressed to developers who plan to include this package
+into their own projects.
+
+For maintainer infos, please see the
+[README-MAINTAINER](README-MAINTAINER.md) file.
 
 ### Prerequisites
 
@@ -20,25 +25,89 @@ portable [Node.js](https://nodejs.org/) command line application.
 Compiling the source code requires a modern C++ compiler, preferably
 GCC 5 or higher. 
 
-### Easy install
+## Install
 
-This package is available as
-[`@sifive/arty-boards`](https://www.npmjs.com/package/@sifive/arty-boards)
-from the `npmjs.com` registry; with `xpm` available, installing the
-latest version of the package is quite easy:
+As a source xPacks, the easiest way to add it to a project is via **xpm**,
+but it can also be used as any Git project, for example as a submodule.
+
+### Prerequisites
+
+A recent [xpm](https://xpack.github.io/xpm/),
+which is a portable [Node.js](https://nodejs.org/) command line application.
+
+For details please follow the instructions in the
+[install](https://xpack.github.io/install/) page.
+
+### xpm
+
+Note: the package will be available from npmjs.com at a later date.
+
+For now, it can be installed from GitHub:
 
 ```console
-$ xpm install @sifive/arty-boards@latest
+$ cd <project>
+$ xpm init # Unless a package.json is already present
+
+$ xpm install github:micro-os-plus/platform-sifive-arty-xpack
 ```
 
-This package is also available from
-[GitHub](https://github.com/micro-os-plus/platform-arty-xpack):
+When ready, this package will be available as
+[`@xpack-sifive/platform-arty`](https://www.npmjs.com/package/@xpack-sifive/platform-arty)
+from the `npmjs.com` registry:
 
 ```console
-$ git clone https://github.com/micro-os-plus/platform-arty-xpack.git platform-arty-xpack.git
+$ cd <project>
+$ xpm init # Unless a package.json is already present
+
+$ xpm install @xpack-sifive/platform-arty@latest
 ```
 
-### How to use
+### Git submodule
+
+If, for any reason, **xpm** is not available, the next recommended
+solution is to link it as a Git submodule below an `xpacks` folder.
+
+```console
+$ cd <project>
+$ git init # Unless already a Git project
+$ mkdir -p xpacks
+
+$ git submodule add https://github.com/micro-os-plus/platform-sifive-arty-xpack.git \
+  xpacks/micro-os-plus-platform-sifive-arty
+```
+
+## Branches
+
+Apart from the unused `master` branch, there are two active branches:
+
+- `xpack`, with the latest stable version
+- `xpack-develop`, with the current development version
+
+All development is done in the `xpack-develop` branch, and contributions via
+Pull Requests should be directed to this branch.
+
+When new releases are published, the `xpack-develop` branch is merged
+into `xpack`.
+
+## User info
+
+TBD
+
+### Status
+
+The SiFive Arty definitions are fully functional.
+
+### Build & integration info
+
+To include this package in a project, consider the following details.
+
+#### Source folders
+
+- `src`
+
+#### Include folders
+
+- `include`
 
 The standard way to include the board files is
 
@@ -46,12 +115,25 @@ The standard way to include the board files is
 #include <micro-os-plus/platform.h>
 ```
 
-### Macros
+#### Preprocessor definitions
 
 - `SIFIVE_E31ARTY_BOARD`
 - `SIFIVE_E51ARTY_BOARD`
 
-### E31/E51 Core Complex FPGA Eval Kit Clock and Reset
+#### Compiler options
+
+- `-std=c++17` or higher for C++ sources
+- `-std=c11` for C sources
+
+#### Namespaces
+
+TBD
+
+#### Classes
+
+TBD
+
+#### E31/E51 Core Complex FPGA Eval Kit Clock and Reset
 
 The E31/E51 Core Complex FPGA Eval Kit has a 100MHz input to the
 FPGA. This is used to derive the Core Complex’s `io_coreClock` at
@@ -66,7 +148,7 @@ combined with the `io_ndreset` to drive the reset input to the Core Complex.
 The reset vector is set with Switch 0. Leave the switch in the
 “Off” position to execute from SPI Flash.
 
-### Global interrupts
+#### Global interrupts
 
 - UART TX/RX	1
 - SWITCH 0 2
@@ -95,18 +177,21 @@ The reset vector is set with Switch 0. Leave the switch in the
 - PWM CMP[2] LED 1 GREEN 25
 - PWM CMP[3] LED 1 BLUE 26
 
-## Maintainer info
+### Examples
 
-### How to publish
+TBD
 
-- commit all changes
-- update `CHANGELOG.md`; commit with a message like _CHANGELOG: prepare v0.1.2_
-- `npm version patch`
-- push all changes to GitHub
-- `npm publish`
+### Known problems
+
+- none
+
+### Tests
+
+TBD
 
 ## License
 
 The original content is released under the
-[MIT License](https://opensource.org/licenses/MIT), with all rights reserved to
-[Liviu Ionescu](https://github.com/ilg-ul).
+[MIT License](https://opensource.org/licenses/MIT/),
+with all rights reserved to
+[Liviu Ionescu](https://github.com/ilg-ul/).
