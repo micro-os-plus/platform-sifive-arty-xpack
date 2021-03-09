@@ -65,6 +65,8 @@ extern "C"
 
 #if defined(__cplusplus)
 
+// ----------------------------------------------------------------------------
+
 namespace riscv
 {
   namespace board
@@ -76,6 +78,8 @@ namespace riscv
 
   } // namespace board
 } // namespace riscv
+
+// ----------------------------------------------------------------------------
 
 #endif // defined(__cplusplus)
 
