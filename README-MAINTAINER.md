@@ -1,6 +1,6 @@
 [![license](https://img.shields.io/github/license/micro-os-plus/platform-sifive-arty-xpack)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/blob/xpack/LICENSE)
 [![CI on Push](https://github.com/micro-os-plus/platform-sifive-arty-xpack/workflows/CI%20on%20Push/badge.svg)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/actions?query=workflow%3A%22CI+on+Push%22)
-[![GitHub issues](https://img.shields.io/github/issues/micro-os-plus/platform-sifive-arty-xpack.svg)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/issues)
+[![GitHub issues](https://img.shields.io/github/issues/micro-os-plus/platform-sifive-arty-xpack.svg)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/issues/)
 [![GitHub pulls](https://img.shields.io/github/issues-pr/micro-os-plus/platform-sifive-arty-xpack.svg)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/pulls)
 
 # Maintainer info
@@ -40,7 +40,7 @@ In the `micro-os-plus/web-jekyll` GitHub repo:
 - update the GitHub Actions URLs using the actual test pages
 
 If any, refer to closed
-[issues](https://github.com/micro-os-plus/platform-sifive-arty/issues)
+[issues](https://github.com/micro-os-plus/platform-sifive-arty-xpack/issues/)
 as:
 
 - **[Issue:\[#1\]\(...\)]**.
