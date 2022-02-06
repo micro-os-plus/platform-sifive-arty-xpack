@@ -125,11 +125,11 @@ The standard way to include the board files is
 - `-std=c++17` or higher for C++ sources
 - `-std=c11` for C sources
 
-#### Namespaces
+#### C++ Namespaces
 
 TBD
 
-#### Classes
+#### C++ Classes
 
 TBD
 
