@@ -1,7 +1,7 @@
 [![license](https://img.shields.io/github/license/micro-os-plus/platform-sifive-arty-xpack)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/blob/xpack/LICENSE)
 [![CI on Push](https://github.com/micro-os-plus/platform-sifive-arty-xpack/workflows/CI%20on%20Push/badge.svg)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/actions?query=workflow%3A%22CI+on+Push%22)
 
-# A source xPack with the µOS++ SiFive Core Complex IP Arty boards specific files
+# A source library xPack with the µOS++ SiFive Core Complex IP Arty boards specific files
 
 This project provides support for the SiFive synthesised E31/E51 devices
 running on the Arty development board.
@@ -27,8 +27,8 @@ GCC 5 or higher.
 
 ## Install
 
-As a source xPacks, the easiest way to add it to a project is via **xpm**,
-but it can also be used as any Git project, for example as a submodule.
+As a source library xPacks, the easiest way to add it to a project is via
+**xpm**, but it can also be used as any Git project, for example as a submodule.
 
 ### Prerequisites
 
