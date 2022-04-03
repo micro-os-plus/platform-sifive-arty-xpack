@@ -117,7 +117,7 @@ When the release is considered stable, promote it as `latest`:
 
 - `npm dist-tag ls @xpack-sifive/platform-arty`
 - `npm dist-tag add @xpack-sifive/platform-arty@2.0.1 latest`
-- `npm dist-tag ls @@xpack-sifive/platform-arty`
+- `npm dist-tag ls @xpack-sifive/platform-arty`
 
 ## Announce to the community
 
