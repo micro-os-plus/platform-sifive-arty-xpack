@@ -1,3 +1,6 @@
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/micro-os-plus/platform-sifive-arty-xpack)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/blob/xpack/package.json)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/micro-os-plus/platform-sifive-arty-xpack)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/tags/)
+[![npm (scoped)](https://img.shields.io/npm/v/@micro-os-plus/platform-sifive-arty.svg?color=blue)](https://www.npmjs.com/package/@micro-os-plus/platform-sifive-arty/)
 [![license](https://img.shields.io/github/license/micro-os-plus/platform-sifive-arty-xpack)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/blob/xpack/LICENSE)
 [![CI on Push](https://github.com/micro-os-plus/platform-sifive-arty-xpack/actions/workflows/CI.yml/badge.svg)](https://github.com/micro-os-plus/platform-sifive-arty-xpack/actions/workflows/CI.yml)
 
