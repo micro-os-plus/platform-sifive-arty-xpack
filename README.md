@@ -84,7 +84,7 @@ git init # Unless already a Git project
 mkdir -p xpacks
 
 git submodule add https://github.com/micro-os-plus/platform-sifive-arty-xpack.git \
-  xpacks/micro-os-plus-platform-sifive-arty
+  xpacks/@micro-os-plus/platform-sifive-arty
 ```
 
 ## Branches
