@@ -1,7 +1,7 @@
 {
   "name": "@xpack-sifive/platform-arty",
   "version": "2.0.1",
-  "description": "A source library xPack with the µOS++ support for the SiFive Core Complex Arty boards",
+  "description": "A source code library with the µOS++ support for the SiFive Core Complex Arty boards",
   "main": "",
   "scripts": {
     "npm-install": "npm install",
